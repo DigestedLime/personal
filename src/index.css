@@ -5,16 +5,39 @@
 }
 
 :root {
-  --primary-color: #6366f1;
-  --secondary-color: #8b5cf6;
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
-  --bg-dark: #111827;
-  --border-color: #e5e7eb;
+  /* Sage Green and Lavender Purple Theme */
+  --sage-green: #9CAF88;
+  --sage-green-light: #B8C9A8;
+  --sage-green-dark: #7A8F6B;
+  --lavender-purple: #B19CD9;
+  --lavender-purple-light: #C8B5E8;
+  --lavender-purple-dark: #9B7FC4;
+  
+  /* Light mode colors */
+  --primary-color: var(--sage-green);
+  --secondary-color: var(--lavender-purple);
+  --text-primary: #2D3748;
+  --text-secondary: #4A5568;
+  --bg-primary: #FAFAF9;
+  --bg-secondary: #F5F5F3;
+  --bg-tertiary: #EFEFEB;
+  --border-color: #E2E8E0;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dark {
+  /* Dark mode colors */
+  --primary-color: var(--sage-green-light);
+  --secondary-color: var(--lavender-purple-light);
+  --text-primary: #E2E8F0;
+  --text-secondary: #CBD5E0;
+  --bg-primary: #1A202C;
+  --bg-secondary: #2D3748;
+  --bg-tertiary: #4A5568;
+  --border-color: #4A5568;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -24,8 +47,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-primary);
+  background-color: var(--bg-primary);
   line-height: 1.6;
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 code {
@@ -45,3 +70,15 @@ button {
   font-family: inherit;
 }
 
+/* Plant/flower decorative elements */
+.plant-decoration {
+  position: absolute;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.plant-decoration svg {
+  width: 100%;
+  height: 100%;
+}

@@ -1,30 +1,31 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import About from './components/About'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
-import Leadership from './components/Leadership'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import AboutPage from './pages/AboutPage'
+import NowPage from './pages/NowPage'
+import BlogRedirect from './pages/BlogRedirect'
+import ResumePage from './pages/ResumePage'
 import './App.css'
 
 function App() {
-  const [activeSection, setActiveSection] = useState('about')
+  const [darkMode, setDarkMode] = useState(false)
 
   return (
-    <div className="App">
-      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
-      <main>
-        <About id="about" setActiveSection={setActiveSection} />
-        <Experience id="experience" setActiveSection={setActiveSection} />
-        <Projects id="projects" setActiveSection={setActiveSection} />
-        <Leadership id="leadership" setActiveSection={setActiveSection} />
-        <Contact id="contact" setActiveSection={setActiveSection} />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter basename="/personal">
+      <div className={`App ${darkMode ? 'dark' : 'light'}`}>
+        <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+        <main>
+          <Routes>
+            <Route path="/" element={<AboutPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/now" element={<NowPage />} />
+            <Route path="/blog" element={<BlogRedirect />} />
+            <Route path="/resume" element={<ResumePage />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   )
 }
 
 export default App
-

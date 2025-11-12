@@ -1,0 +1,108 @@
+.now-page {
+  padding-top: 100px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.now-page::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--lavender-purple) 0%, transparent 70%);
+  opacity: 0.1;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.now-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.now-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--sage-green), var(--lavender-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.now-updated {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.now-section {
+  margin-bottom: 2.5rem;
+}
+
+.now-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--sage-green);
+}
+
+.now-section p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.now-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.now-section ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.now-section ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--lavender-purple);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.now-note {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.now-note a {
+  color: var(--lavender-purple);
+  text-decoration: underline;
+}
+
+.now-note a:hover {
+  color: var(--sage-green);
+}
+
+@media (max-width: 768px) {
+  .now-title {
+    font-size: 2.5rem;
+  }
+}
+

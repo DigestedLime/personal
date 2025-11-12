@@ -1,0 +1,75 @@
+.resume-page {
+  padding-top: 100px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-content {
+  max-width: 600px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.resume-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--sage-green), var(--lavender-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.resume-content p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.resume-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.resume-link {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 1rem;
+  background: linear-gradient(135deg, var(--sage-green), var(--lavender-purple));
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.resume-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.resume-download {
+  background: transparent;
+  color: var(--sage-green);
+  border: 2px solid var(--sage-green);
+}
+
+.resume-download:hover {
+  background: var(--sage-green);
+  color: white;
+}
+
+.resume-note {
+  margin-top: 2rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
