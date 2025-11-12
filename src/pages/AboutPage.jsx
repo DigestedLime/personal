@@ -34,33 +34,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 3,
-    type: 'work',
-    title: 'software engineering intern',
-    organization: 'graycore',
-    timeframe: 'sep 2023 - nov 2023',
-    location: 'remote',
-    description: 'contributed to daffodil, a progressive web framework for enterprise commerce.',
-    bullets: [
-      'developed typescript rest apis for daffodil\'s commerce platform integrations.',
-      'optimized endpoint structure for scalability and easier extension by client teams.'
-    ]
-  },
-  {
-    id: 4,
-    type: 'work',
-    title: 'software engineer intern',
-    organization: 'nasdaq',
-    timeframe: 'may 2023 - aug 2023',
-    location: 'new york, ny',
-    description: 'improved trading protocol reliability and built monitoring tools for latency analysis.',
-    bullets: [
-      'enhanced fix, ouch, and itch protocols for fault tolerance and recovery during 24x7 trading.',
-      'built a jupyter-based analytics toolkit to monitor latency and streamline qa workflows.'
-    ]
-  },
-  {
-    id: 5,
+    id: 7,
     type: 'work',
     title: 'software development engineer intern',
     organization: 'amazon web services (aws)',
@@ -73,11 +47,24 @@ const timelineItems = [
     ]
   },
   {
-    id: 19,
+    id: 4,
+    type: 'work',
+    title: 'undergraduate researcher',
+    organization: 'university of toronto (supervised by dr. emmy murphy)',
+    timeframe: 'jan 2024 - apr 2024',
+    location: 'toronto, on',
+    description: 'investigated stable orbits in the three-body problem for senior thesis.',
+    bullets: [
+      'completed senior thesis on stability properties of orbital systems.',
+      'applied advanced differential equations and topology techniques.'
+    ]
+  },
+  {
+    id: 5,
     type: 'work',
     title: 'teaching assistant',
     organization: 'university of toronto',
-    timeframe: '2020 - 2024',
+    timeframe: 'sep 2020 - apr 2024',
     location: 'toronto, on',
     description: 'taught over 2000 hours across 35+ computer science and math course sections.',
     bullets: [
@@ -100,33 +87,33 @@ const timelineItems = [
     ]
   },
   {
-    id: 12,
+    id: 6,
     type: 'work',
-    title: 'undergraduate researcher',
-    organization: 'university of toronto (supervised by dr. ahmed ashraf)',
-    timeframe: 'may 2024 - aug 2024',
-    location: 'toronto, on',
-    description: 'conducted research on proof assistants for cs education under nserc funding.',
+    title: 'software engineering intern',
+    organization: 'graycore',
+    timeframe: 'sep 2023 - nov 2023',
+    location: 'remote',
+    description: 'contributed to daffodil, a progressive web framework for enterprise commerce.',
     bullets: [
-      'developed educational proof tooling for computer science instruction.',
-      'fully funded by the nserc undergraduate student research award.'
+      'developed typescript rest apis for daffodil\'s commerce platform integrations.',
+      'optimized endpoint structure for scalability and easier extension by client teams.'
     ]
   },
   {
-    id: 13,
+    id: 8,
     type: 'work',
-    title: 'undergraduate researcher',
-    organization: 'university of toronto (supervised by dr. emmy murphy)',
-    timeframe: 'jan 2024 - apr 2024',
-    location: 'toronto, on',
-    description: 'investigated stable orbits in the three-body problem for senior thesis.',
+    title: 'software engineer intern',
+    organization: 'nasdaq',
+    timeframe: 'may 2023 - aug 2023',
+    location: 'new york, ny',
+    description: 'improved trading protocol reliability and built monitoring tools for latency analysis.',
     bullets: [
-      'completed senior thesis on stability properties of orbital systems.',
-      'applied advanced differential equations and topology techniques.'
+      'enhanced fix, ouch, and itch protocols for fault tolerance and recovery during 24x7 trading.',
+      'built a jupyter-based analytics toolkit to monitor latency and streamline qa workflows.'
     ]
   },
   {
-    id: 14,
+    id: 9,
     type: 'work',
     title: 'undergraduate researcher',
     organization: 'university of toronto (supervised by dr. micheal pawliuk)',
@@ -139,7 +126,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 15,
+    id: 10,
     type: 'work',
     title: 'undergraduate researcher',
     organization: 'university of toronto (supervised by dr. alexander kupers)',
@@ -152,7 +139,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 16,
+    id: 11,
     type: 'work',
     title: 'undergraduate researcher',
     organization: 'university of toronto (supervised by dr. swastik kopparty)',
@@ -165,7 +152,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 17,
+    id: 12,
     type: 'work',
     title: 'undergraduate researcher',
     organization: 'university of toronto (supervised by dr. swastik kopparty)',
@@ -178,7 +165,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 18,
+    id: 13,
     type: 'work',
     title: 'research assistant',
     organization: 'the fields institute (supervised by dr. kevin cheung)',
@@ -190,13 +177,26 @@ const timelineItems = [
       'curated benchmark datasets and achieved 10% computation time improvement.'
     ]
   },
+  {
+    id: 15,
+    type: 'work',
+    title: 'pcrs: programming exercises',
+    organization: 'university of toronto',
+    timeframe: 'may 2020 - aug 2020',
+    location: 'toronto, on',
+    description: 'developed interactive exercises for theory of computation students.',
+    bullets: [
+      'built regex-to-dfa assessments using hopcroft\'s algorithm for 500+ students.',
+      'partnered with instructors to integrate pedagogical insights and instant feedback.'
+    ]
+  },
   // passion projects (love)
   {
-    id: 6,
-    type: 'love',
+    id: 14,
+    type: '',
     title: 'baobab',
     organization: 'personal project',
-    timeframe: '2024',
+    timeframe: 'may 2021 - aug 2021',
     location: 'toronto, on',
     description: 'built an education-first social platform to help cohorts learn together.',
     bullets: [
@@ -205,24 +205,11 @@ const timelineItems = [
     ]
   },
   {
-    id: 7,
-    type: 'love',
-    title: 'pcrs: programming exercises',
-    organization: 'university of toronto',
-    timeframe: '2024',
-    location: 'toronto, on',
-    description: 'developed interactive exercises for theory of computation students.',
-    bullets: [
-      'built regex-to-dfa assessments using hopcroft\'s algorithm for 500+ students.',
-      'partnered with instructors to integrate pedagogical insights and instant feedback.'
-    ]
-  },
-  {
-    id: 8,
-    type: 'love',
+    id: 16,
+    type: '',
     title: 'numerical algorithms visualizer',
     organization: 'personal project',
-    timeframe: '2024',
+    timeframe: 'may 2020 - aug 2020',
     location: 'toronto, on',
     description: 'built a visualization suite for comparing numerical methods.',
     bullets: [
@@ -231,7 +218,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 9,
+    id: 3,
     type: 'love',
     title: 'mathematical and computational sciences society',
     organization: 'president',
@@ -240,13 +227,49 @@ const timelineItems = [
     description: 'led the largest student society for cs, math, and stats at utm.',
     bullets: [
       'led a 30-person executive team serving 5,000+ students.',
-      'co-founded deerhacks, mississauga\'s largest hackathon with 300+ annual participants.',
+      'ran the third iteration of deerhacks, mississauga\'s largest hackathon with 300+ annual participants.',
       'forged partnerships with icube and mmpa to connect students with industry.'
+    ]
+  },
+  {
+    id: 17,
+    type: 'love',
+    title: 'deerhacks',
+    organization: 'cofounder',
+    timeframe: 'apr 2022 - present',
+    location: 'toronto, on',
+    description: 'co-founded mississauga\'s largest hackathon with 300+ annual participants.',
+    bullets: []
+  },
+  {
+    id: 18,
+    type: 'love',
+    title: 'personal photographer',
+    organization: 'cool people i know',
+    timeframe: 'may 2022 - present',
+    location: 'everywhere',
+    description: 'taking photos and capturing memories of the goofballs that surround me',
+    bullets: [
+      'picked up the camera in may 2022 and haven\'t put it down'
+    ]
+  },
+  {
+    id: 19,
+    type: 'love',
+    title: 'mathematical and computational sciences society',
+    organization: 'shadow president / vp of external affairs',
+    timeframe: 'may 2021 - apr 2022',
+    location: 'toronto, on',
+    description: 'helped lead the largest student society for cs, math, and stats at utm.',
+    bullets: [
+      'helped co-found deerhacks, mississauga\'s largest hackathon with 300+ annual participants.',
+      'supported many other hackathon-style events, unfortunately now defunct',
+      'ran a campus-wide hide and seek event because we can and should'
     ]
   },
   // education
   {
-    id: 10,
+    id: 25,
     type: 'education',
     title: 'honours bsc. in computer science & mathematics',
     organization: 'university of toronto',
@@ -257,15 +280,28 @@ const timelineItems = [
   },
   // silly/fun items
   {
-    id: 11,
+    id: 23,
     type: 'silly',
-    title: 'utm urbanism club',
-    organization: 'member',
-    timeframe: 'may 2023 - present',
+    title: 'community member',
+    organization: 'utm urbanism club',
+    timeframe: 'may 2023 - apr 2024',
     location: 'toronto, on',
     description: 'participate in local urbanism and transit advocacy events.',
     bullets: [
       'organized discussions on transit and urban planning with advocates like reece martin.'
+    ]
+  },
+  {
+    id: 22,
+    type: 'silly',
+    title: 'amazon boat goat',
+    organization: '',
+    timeframe: 'summer 2022',
+    location: 'vancouver, bc',
+    description: 'got amazon to give 200 of us overpaid interns a boat party',
+    bullets: [
+      'secured $10,000 in funding to elevate intern engagement',
+      'organized intern events from board game nights to rooftop barbeques'
     ]
   }
 ]
@@ -293,11 +329,15 @@ const blogPosts = [
   }
 ]
 
+function idComparator(a, b) {
+  return a.id - b.id
+}
+
 function AboutPage() {
   const [filter, setFilter] = useState('love') // 'work', 'love', 'silly'
   const timelineRef = useRef(null)
 
-  const filteredItems = timelineItems.filter(item => {
+  const filteredItems = timelineItems.sort(idComparator).filter(item => {
         if (filter === 'work') return item.type === 'work'
         if (filter === 'love') return item.type === 'love'
         if (filter === 'silly') return item.type === 'silly' || item.type === 'education'
@@ -399,10 +439,11 @@ function AboutPage() {
             what i did for work
           </button>
         </div>
-        const [selectedItem, setSelectedItem] = useState(null)
+        {/* const [selectedItem, setSelectedItem] = useState(null) */}
+        {/* onClick={() => setSelectedItem(item)} */}
         <div className="timeline">
           {filteredItems.map((item) => (
-            <div key={item.id} className={`timeline-item timeline-item-${item.type}`} onClick={() => setSelectedItem(item)}>
+            <div key={item.id} className={`timeline-item timeline-item-${item.type}`} >
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3 className="timeline-title">{item.title}</h3>
@@ -422,7 +463,7 @@ function AboutPage() {
               </div>
             </div>
           ))}
-          {selectedItem && (
+          {/*{selectedItem && (
             <div
               className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50"
               onClick={() => setSelectedItem(null)}
@@ -431,7 +472,6 @@ function AboutPage() {
                 className="relative bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-2xl max-w-lg w-[90%] text-gray-800 dark:text-gray-200"
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* Close button */}
                 <button
                   className="absolute top-3 right-4 text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 text-xl"
                   onClick={() => setSelectedItem(null)}
@@ -439,7 +479,6 @@ function AboutPage() {
                   ✕
                 </button>
 
-                {/* Title + Meta */}
                 <h2 className="text-2xl font-semibold mb-1">{selectedItem.title}</h2>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
                   {selectedItem.organization}
@@ -449,7 +488,6 @@ function AboutPage() {
                   {selectedItem.location && ` • ${selectedItem.location}`}
                 </p>
 
-                {/* Bullets */}
                 {selectedItem.bullets && selectedItem.bullets.length > 0 ? (
                   <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
                     {selectedItem.bullets.map((bullet, idx) => (
@@ -461,7 +499,7 @@ function AboutPage() {
                 )}
               </div>
             </div>
-          )}
+          )}*/}
         </div>
       </section>
     </div>
