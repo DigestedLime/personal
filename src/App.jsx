@@ -5,6 +5,7 @@ import AboutPage from './pages/AboutPage'
 import NowPage from './pages/NowPage'
 import BlogRedirect from './pages/BlogRedirect'
 import ResumePage from './pages/ResumePage'
+import PortfolioPage from './pages/PortfolioPage'
 import './App.css'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/now" element={<NowPage />} />
             <Route path="/blog" element={<BlogRedirect />} />
             <Route path="/resume" element={<ResumePage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
           </Routes>
         </main>
       </div>

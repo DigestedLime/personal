@@ -6,38 +6,41 @@
 
 :root {
   /* Sage Green and Lavender Purple Theme */
-  --sage-green: #9CAF88;
-  --sage-green-light: #B8C9A8;
-  --sage-green-dark: #7A8F6B;
-  --lavender-purple: #B19CD9;
-  --lavender-purple-light: #C8B5E8;
-  --lavender-purple-dark: #9B7FC4;
-  
-  /* Light mode colors */
+  --sage-green: #9caf88;
+  --sage-green-light: #b8c9a8;
+  --sage-green-dark: #7a8f6b;
+  --lavender-purple: #b19cd9;
+  --lavender-purple-light: #c8b5e8;
+  --lavender-purple-dark: #9b7fc4;
+
+  /* Accent gradient shared token */
+  --accent-gradient: linear-gradient(135deg, var(--sage-green), var(--lavender-purple));
+
+  /* Light mode colors tuned toward palette */
   --primary-color: var(--sage-green);
   --secondary-color: var(--lavender-purple);
-  --text-primary: #2D3748;
-  --text-secondary: #4A5568;
-  --bg-primary: #FAFAF9;
-  --bg-secondary: #F5F5F3;
-  --bg-tertiary: #EFEFEB;
-  --border-color: #E2E8E0;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --text-primary: #2d2f34;               /* slightly cooler to mesh with lavender */
+  --text-secondary: #5a5f6f;             /* soft desaturated purple-gray */
+  --bg-primary: #fbfafc;                 /* faint lavender tint */
+  --bg-secondary: #f5f3f9;               /* subtle lavender wash */
+  --bg-tertiary: #eff0f4;                /* blends with secondary */
+  --border-color: #e6e3ee;               /* lavender-leaning border */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.06);
 }
 
 .dark {
-  /* Dark mode colors */
+  /* Dark mode colors tuned toward palette */
   --primary-color: var(--sage-green-light);
   --secondary-color: var(--lavender-purple-light);
-  --text-primary: #E2E8F0;
-  --text-secondary: #CBD5E0;
-  --bg-primary: #1A202C;
-  --bg-secondary: #2D3748;
-  --bg-tertiary: #4A5568;
-  --border-color: #4A5568;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --text-primary: #e6ebf5;
+  --text-secondary: #b8c0d0;             /* lavender-gray */
+  --bg-primary: #141821;                 /* deep slate with lavender hue */
+  --bg-secondary: #1c2230;               /* slightly lighter slate */
+  --bg-tertiary: #262e3f;                /* used for panels */
+  --border-color: #343d50;               /* cool border */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.35), 0 2px 4px -1px rgba(0, 0, 0, 0.24);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.45), 0 4px 6px -2px rgba(0, 0, 0, 0.35);
 }
 
 body {
@@ -51,6 +54,16 @@ body {
   line-height: 1.6;
   scroll-behavior: smooth;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Subtle cohesive interactions */
+::selection {
+  background: var(--lavender-purple-light);
+  color: #fff;
+}
+
+a:hover {
+  color: var(--primary-color);
 }
 
 code {

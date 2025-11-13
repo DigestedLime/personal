@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import './AboutPage.css'
 
 // This data structure will be populated from the PDFs
@@ -11,7 +11,7 @@ const timelineItems = [
     title: 'software engineer',
     organization: 'robinhood',
     timeframe: 'dec 2024 - present',
-    location: 'toronto, on / remote',
+    location: 'toronto, on',
     description: 'developing core locate and regulatory systems for short selling and optimizing data workflows.',
     bullets: [
       'designed locate and regulatory services projected to generate $7.5m arr in the first year.',
@@ -92,7 +92,7 @@ const timelineItems = [
     title: 'software engineering intern',
     organization: 'graycore',
     timeframe: 'sep 2023 - nov 2023',
-    location: 'remote',
+    location: 'remote us',
     description: 'contributed to daffodil, a progressive web framework for enterprise commerce.',
     bullets: [
       'developed typescript rest apis for daffodil\'s commerce platform integrations.',
@@ -105,7 +105,7 @@ const timelineItems = [
     title: 'software engineer intern',
     organization: 'nasdaq',
     timeframe: 'may 2023 - aug 2023',
-    location: 'new york, ny',
+    location: 'toronto, on + new york, ny',
     description: 'improved trading protocol reliability and built monitoring tools for latency analysis.',
     bullets: [
       'enhanced fix, ouch, and itch protocols for fault tolerance and recovery during 24x7 trading.',
@@ -180,12 +180,13 @@ const timelineItems = [
   {
     id: 15,
     type: 'work',
-    title: 'pcrs: programming exercises',
+    title: 'undergraduate software researcher',
     organization: 'university of toronto',
     timeframe: 'may 2020 - aug 2020',
     location: 'toronto, on',
     description: 'developed interactive exercises for theory of computation students.',
     bullets: [
+      'worked on pcrs, a web-based platform for programming assignments',
       'built regex-to-dfa assessments using hopcroft\'s algorithm for 500+ students.',
       'partnered with instructors to integrate pedagogical insights and instant feedback.'
     ]
@@ -220,10 +221,10 @@ const timelineItems = [
   {
     id: 3,
     type: 'love',
-    title: 'mathematical and computational sciences society',
-    organization: 'president',
+    title: 'president',
+    organization: 'mathematical and computational sciences society',
     timeframe: 'may 2023 - apr 2024',
-    location: 'toronto, on',
+    location: 'mississauga, on',
     description: 'led the largest student society for cs, math, and stats at utm.',
     bullets: [
       'led a 30-person executive team serving 5,000+ students.',
@@ -234,10 +235,10 @@ const timelineItems = [
   {
     id: 17,
     type: 'love',
-    title: 'deerhacks',
-    organization: 'cofounder',
+    title: 'co-founder',
+    organization: 'deerhacks',
     timeframe: 'apr 2022 - present',
-    location: 'toronto, on',
+    location: 'mississauga, on',
     description: 'co-founded mississauga\'s largest hackathon with 300+ annual participants.',
     bullets: []
   },
@@ -256,10 +257,10 @@ const timelineItems = [
   {
     id: 19,
     type: 'love',
-    title: 'mathematical and computational sciences society',
-    organization: 'shadow president / vp of external affairs',
+    title: 'shadow president / vp of external affairs',
+    organization: 'mathematical and computational sciences society',
     timeframe: 'may 2021 - apr 2022',
-    location: 'toronto, on',
+    location: 'mississauga, on',
     description: 'helped lead the largest student society for cs, math, and stats at utm.',
     bullets: [
       'helped co-found deerhacks, mississauga\'s largest hackathon with 300+ annual participants.',
@@ -267,41 +268,108 @@ const timelineItems = [
       'ran a campus-wide hide and seek event because we can and should'
     ]
   },
+  {
+    id: 26,
+    type: 'love',
+    title: 'club exec',
+    organization: 'multiple uoft clubs (mainly cs & math)',
+    timeframe: 'sep 2020 - apr 2024',
+    location: 'mississauga, on + toronto, on',
+    description: 'helped out in various roles at various clubs at uoft',
+    bullets: []
+  },
+  {
+    id: 27,
+    type: 'love',
+    title: 'speaker',
+    organization: 'utm math club',
+    timeframe: 'sep 2020 - apr 2024',
+    location: 'mississauga, on',
+    description: 'helped out in various roles at various clubs at uoft',
+    bullets: []
+  },
+  {
+    id: 28,
+    type: 'love',
+    title: '',
+    organization: 'utm math club',
+    timeframe: 'sep 2020 - apr 2024',
+    location: 'mississauga, on',
+    description: 'helped out in various roles at various clubs at uoft',
+    bullets: []
+  },
   // education
   {
     id: 25,
     type: 'education',
-    title: 'honours bsc. in computer science & mathematics',
+    title: 'former university student',
     organization: 'university of toronto',
     timeframe: '2020 - 2024',
     location: 'toronto, on',
-    description: 'honours bsc. in computer science and mathematics, gpa 3.8/4.0, dean’s list every term.',
+    description: 'honours bsc. in computer science and mathematics, gpa 3.8/4.0, dean\'s list every term.',
     bullets: []
   },
   // silly/fun items
-  {
-    id: 23,
-    type: 'silly',
-    title: 'community member',
-    organization: 'utm urbanism club',
-    timeframe: 'may 2023 - apr 2024',
-    location: 'toronto, on',
-    description: 'participate in local urbanism and transit advocacy events.',
-    bullets: [
-      'organized discussions on transit and urban planning with advocates like reece martin.'
-    ]
-  },
+  // {
+  //   id: 23,
+  //   type: 'silly',
+  //   title: 'community member',
+  //   organization: 'utm urbanism club',
+  //   timeframe: 'may 2023 - apr 2024',
+  //   location: 'toronto, on',
+  //   description: 'participate in local urbanism and transit advocacy events.',
+  //   bullets: [
+  //     'organized discussions on transit and urban planning with advocates like reece martin.'
+  //   ]
+  // },
   {
     id: 22,
     type: 'silly',
-    title: 'amazon boat goat',
-    organization: '',
+    title: 'boat goat',
+    organization: 'amazon interns',
     timeframe: 'summer 2022',
     location: 'vancouver, bc',
     description: 'got amazon to give 200 of us overpaid interns a boat party',
     bullets: [
       'secured $10,000 in funding to elevate intern engagement',
       'organized intern events from board game nights to rooftop barbeques'
+    ]
+  },
+  {
+    id: 30,
+    type: 'silly',
+    title: 'one piece card game expert',
+    organization: 'one piece card game',
+    timeframe: 'aug 2024 - present',
+    location: 'toronto, on',
+    description: 'got 70th at a 1024 person tournament, trying to do better',
+    bullets: [
+      'being a meta sheep and playing whatever\'s good'
+    ]
+  },
+  {
+    id: 31,
+    type: 'silly',
+    title: 'duolingo user',
+    organization: 'hell',
+    timeframe: 'forever',
+    location: 'everywhere',
+    description: 'trying to learn hindi, japanese and sometimes mandarin',
+    bullets: [
+      'talk to me in french, japanese or hindi please',
+      'i need practice with everything'
+    ]
+  },
+  {
+    id: 32,
+    type: 'silly',
+    title: 'walking',
+    organization: 'myself',
+    timeframe: 'sometime in 2024',
+    location: 'toronto, on',
+    description: 'walked from finch to union',
+    bullets: [
+      'also walked like 9 km to go meet shakir and ethan',
     ]
   }
 ]
@@ -333,14 +401,30 @@ function idComparator(a, b) {
   return a.id - b.id
 }
 
+// Images should be placed in public/images/hero/
+const heroImages = [
+  { file: 'hero1.jpg', caption: 'somewhere i like being' },
+  { file: 'hero2.jpg', caption: 'something that makes me smile' },
+  { file: 'hero3.jpg', caption: 'a little moment i want to remember' },
+]
+
 function AboutPage() {
   const [filter, setFilter] = useState('love') // 'work', 'love', 'silly'
   const timelineRef = useRef(null)
+  const [hero, setHero] = useState(null)
+  const [selectedItem, setSelectedItem] = useState(null)
+
+  useEffect(() => {
+    if (heroImages.length) {
+      const idx = Math.floor(Math.random() * heroImages.length)
+      setHero(heroImages[idx])
+    }
+  }, [])
 
   const filteredItems = timelineItems.sort(idComparator).filter(item => {
         if (filter === 'work') return item.type === 'work'
         if (filter === 'love') return item.type === 'love'
-        if (filter === 'silly') return item.type === 'silly' || item.type === 'education'
+        if (filter === 'silly') return item.type === 'silly'
         return false
       })
 
@@ -365,8 +449,8 @@ function AboutPage() {
               {workItems.map((item) => (
                 <div key={item.id} className="work-summary-item">
                   <div className="work-summary-header">
-                    <span className="work-org">{item.organization}</span>
                     <span className="work-role">{item.title}</span>
+                    <span className="work-org">{item.organization}</span>
                   </div>
                   <p className="work-description">{item.description}</p>
                 </div>
@@ -381,17 +465,29 @@ function AboutPage() {
           </div>
 
           <div className="about-hero-photo">
-            <div className="photo-placeholder">
-              <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="100" r="80" fill="url(#photoGradient)" />
-                <defs>
-                  <linearGradient id="photoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="var(--sage-green)" />
-                    <stop offset="100%" stopColor="var(--lavender-purple)" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
+            {hero ? (
+              <figure className="hero-image-wrapper">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/hero/${hero.file}`}
+                  alt={hero.caption || 'hero'}
+                  className="hero-image"
+                  loading="lazy"
+                />
+                {hero.caption && <figcaption className="hero-caption">{hero.caption}</figcaption>}
+              </figure>
+            ) : (
+              <div className="photo-placeholder">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="100" cy="100" r="80" fill="url(#photoGradient)" />
+                  <defs>
+                    <linearGradient id="photoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="var(--sage-green)" />
+                      <stop offset="100%" stopColor="var(--lavender-purple)" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            )}
           </div>
 
           <div className="about-hero-section">
@@ -439,11 +535,16 @@ function AboutPage() {
             what i did for work
           </button>
         </div>
-        {/* const [selectedItem, setSelectedItem] = useState(null) */}
-        {/* onClick={() => setSelectedItem(item)} */}
         <div className="timeline">
           {filteredItems.map((item) => (
-            <div key={item.id} className={`timeline-item timeline-item-${item.type}`} >
+            <div
+              key={item.id}
+              className={`timeline-item timeline-item-${item.type}`}
+              role="button"
+              tabIndex={0}
+              onClick={() => setSelectedItem(item)}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setSelectedItem(item) }}
+            >
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3 className="timeline-title">{item.title}</h3>
@@ -463,43 +564,36 @@ function AboutPage() {
               </div>
             </div>
           ))}
-          {/*{selectedItem && (
-            <div
-              className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50"
-              onClick={() => setSelectedItem(null)}
-            >
-              <div
-                className="relative bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-2xl max-w-lg w-[90%] text-gray-800 dark:text-gray-200"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button
-                  className="absolute top-3 right-4 text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 text-xl"
-                  onClick={() => setSelectedItem(null)}
-                >
-                  ✕
-                </button>
 
-                <h2 className="text-2xl font-semibold mb-1">{selectedItem.title}</h2>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                  {selectedItem.organization}
-                </p>
-                <p className="text-sm text-gray-500 mb-4">
+          {selectedItem && (
+            <div className="modal-overlay" onClick={() => setSelectedItem(null)}>
+              <div className="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" onClick={(e) => e.stopPropagation()}>
+                <button className="modal-close" aria-label="Close" onClick={() => setSelectedItem(null)}>✕</button>
+                <h2 id="modal-title" className="modal-title">{selectedItem.title}</h2>
+                {selectedItem.organization && (
+                  <p className="modal-subtitle">{selectedItem.organization}</p>
+                )}
+                <p className="modal-meta">
                   {selectedItem.timeframe}
-                  {selectedItem.location && ` • ${selectedItem.location}`}
+                  {selectedItem.location ? ` • ${selectedItem.location}` : ''}
                 </p>
+
+                {selectedItem.description && (
+                  <p className="modal-description">{selectedItem.description}</p>
+                )}
 
                 {selectedItem.bullets && selectedItem.bullets.length > 0 ? (
-                  <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                  <ul className="modal-bullets">
                     {selectedItem.bullets.map((bullet, idx) => (
                       <li key={idx}>{bullet}</li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-gray-500 italic">no additional details available.</p>
+                  <p className="modal-empty">no additional details available.</p>
                 )}
               </div>
             </div>
-          )}*/}
+          )}
         </div>
       </section>
     </div>

@@ -8,7 +8,7 @@ function ResumePage() {
   return (
     <div className="resume-page">
       <div className="resume-content">
-        <h1>resume</h1>
+        <h1 className="resume-title">resume</h1>
         <p>click below to view or download my resume:</p>
         <div className="resume-actions">
           <a 
