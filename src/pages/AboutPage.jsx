@@ -525,7 +525,7 @@ function AboutPage() {
           </div>
 
           <div className="about-hero-section">
-            <h2 className="about-section-title">blog</h2>
+            <h2 className="about-section-title blog-section-title">blog</h2>
             <div className="blog-summary">
               {blogPosts.map((post) => (
                 <div key={post.id} className="blog-summary-item">
@@ -538,7 +538,7 @@ function AboutPage() {
               href="https://akiratakaki.com/blog"
               target="_blank"
               rel="noopener noreferrer"
-              className="section-link-btn"
+              className="section-link-btn blog-link-btn"
             >
               read blog →
             </a>

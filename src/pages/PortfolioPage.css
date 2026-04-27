@@ -14,11 +14,17 @@
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  color: var(--text-primary); /* fallback if clip-to-text is unsupported */
+  background-image: var(--accent-gradient);
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .portfolio-title {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
 }
 
 .portfolio-notice {
@@ -67,8 +73,22 @@
 }
 
 .portfolio-cta a {
-  color: var(--primary-color);
+  color: var(--primary-color); /* fallback */
   font-weight: 600;
+}
+
+.portfolio-cta a:hover {
+  filter: brightness(1.05);
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .portfolio-cta a {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
 }
 
 .portfolio-cta a:focus-visible {

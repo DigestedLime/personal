@@ -106,7 +106,7 @@
 .blog-title {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--sage-green);
+  color: var(--lavender-purple);
   margin-bottom: 0.5rem;
 }
 
@@ -137,6 +137,19 @@
   color: white;
   transform: translateY(-2px);
   box-shadow: var(--shadow);
+}
+
+.blog-section-title {
+  color: var(--lavender-purple);
+}
+
+.blog-link-btn {
+  color: var(--lavender-purple);
+  border-color: var(--lavender-purple);
+}
+
+.blog-link-btn:hover {
+  background: var(--lavender-purple);
 }
 
 .about-hero-photo {
