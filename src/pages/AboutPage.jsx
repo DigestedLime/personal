@@ -237,7 +237,7 @@ const timelineItems = [
     organization: 'mathematical and computational sciences society',
     timeframe: 'may 2023 - apr 2024',
     location: 'mississauga, on',
-    description: 'led the largest student society for cs, math, and stats at utm.',
+    description: 'led the student society for cs, math, and stats at utm, the largest student society at utm.',
     bullets: [
       'led a 30-person executive team serving 5,000+ students.',
       'ran the third iteration of deerhacks, mississauga\'s largest hackathon with 300+ annual participants.',
@@ -273,7 +273,7 @@ const timelineItems = [
     organization: 'mathematical and computational sciences society',
     timeframe: 'may 2021 - apr 2022',
     location: 'mississauga, on',
-    description: 'helped lead the largest student society for cs, math, and stats at utm.',
+    description: 'helped lead the student society for cs, math, and stats at utm, the largest student society at utm.',
     bullets: [
       'helped co-found deerhacks, mississauga\'s largest hackathon with 300+ annual participants.',
       'supported many other hackathon-style events, unfortunately now defunct',
@@ -297,7 +297,7 @@ const timelineItems = [
     organization: 'utm math club',
     timeframe: 'sep 2020 - apr 2024',
     location: 'mississauga, on',
-    description: 'helped out in various roles at various clubs at uoft',
+    description: 'gave some talks about geometric group theory, cryptography and other math topics',
     bullets: []
   },
   // {
