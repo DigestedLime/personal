@@ -21,6 +21,15 @@
   color: transparent;
 }
 
+.portfolio-notice {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 auto 2rem;
+  max-width: 22ch;
+  color: var(--text-primary);
+}
+
 .portfolio-description {
   color: var(--text-secondary);
   font-size: 1.1rem;

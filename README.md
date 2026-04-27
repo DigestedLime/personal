@@ -109,6 +109,18 @@ npm run build
 
 3. If using GitHub Actions or similar, configure it to deploy the `dist` folder to the `/personal` path on your GitHub Pages site.
 
+#### SPA Routing Note (clean URLs)
+
+This project uses React Router with browser history (clean URLs like `/personal/now`). GitHub Pages does not natively rewrite deep links to your app entry point, so direct visits to nested routes can 404 unless a fallback file is present.
+
+The `build` script handles this by copying `dist/index.html` to `dist/404.html`:
+
+```bash
+npm run build
+```
+
+This allows GitHub Pages to serve the SPA for unknown paths under `/personal`, so direct route access keeps working without hash-based URLs.
+
 ## Technologies Used
 
 - React 18

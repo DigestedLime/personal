@@ -2,18 +2,17 @@ import './PortfolioPage.css'
 
 function PortfolioPage() {
   const portfolioImages = [
-    'p1.jpg',
-    'p2.jpg',
-    'p3.jpg',
-    'p4.jpg',
-    'p5.jpg',
-    'p6.jpg',
+    'p1.png',
+    'p2.png',
+    'p3.png',
+    'p4.png',
   ]
 
   return (
     <div className="portfolio-page">
       <div className="portfolio-content">
         <h1 className="portfolio-title">photos</h1>
+        <p className="portfolio-notice">i have not really gotten started on this page yet</p>
         <div className="portfolio-grid">
           {portfolioImages.map((file, idx) => (
             <figure key={idx} className="portfolio-item">

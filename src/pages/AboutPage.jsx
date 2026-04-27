@@ -403,10 +403,33 @@ function idComparator(a, b) {
 
 // Images should be placed in public/images/hero/
 const heroImages = [
-  { file: 'hero1.jpg', caption: 'somewhere i like being' },
-  { file: 'hero2.jpg', caption: 'something that makes me smile' },
-  { file: 'hero3.jpg', caption: 'a little moment i want to remember' },
+  { file: 'hero142857.png', caption: 'hi there!', weight: 6 },
+  { file: 'hero285714.png', caption: 'larger than life', weight: 6 },
+  { file: 'hero428571.png', caption: 'gotta quench your thirst!', weight: 4 },
+  { file: 'hero571428.png', caption: 'a very cool bag and a torii', weight: 4 },
+  { file: 'hero714285.png', caption: 'excuse me, have we met before?', weight: 2 },
+  { file: 'hero857142.png', caption: 'hiking near vancouver', weight: 1 },
+  { file: 'hero999999.png', caption: 'posing in cancun', weight: 1 },
 ]
+
+function pickWeightedHero(images) {
+  const validImages = images.filter((img) => img.weight > 0)
+  const totalWeight = validImages.reduce((sum, img) => sum + img.weight, 0)
+
+  // Fallback to uniform selection if all weights are invalid.
+  if (!totalWeight || validImages.length === 0) {
+    return images[Math.floor(Math.random() * images.length)]
+  }
+
+  let random = Math.random() * totalWeight
+
+  for (const image of validImages) {
+    random -= image.weight
+    if (random <= 0) return image
+  }
+
+  return validImages[0]
+}
 
 function AboutPage() {
   const [filter, setFilter] = useState('love') // 'work', 'love', 'silly'
@@ -416,8 +439,7 @@ function AboutPage() {
 
   useEffect(() => {
     if (heroImages.length) {
-      const idx = Math.floor(Math.random() * heroImages.length)
-      setHero(heroImages[idx])
+      setHero(pickWeightedHero(heroImages))
     }
   }, [])
 
