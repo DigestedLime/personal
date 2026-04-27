@@ -1,11 +1,12 @@
 import './NowPage.css'
+import { nowPageLastUpdated } from '../generated/nowPageLastUpdated'
 
 function NowPage() {
   return (
     <div className="now-page">
       <section className="now-content">
         <h1 className="now-title">what i&apos;m doing now</h1>
-        <p className="now-updated">last updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</p>
+        <p className="now-updated">last updated: {nowPageLastUpdated}</p>
         
         <div className="now-section">
           <h2>goals</h2>
@@ -40,7 +41,7 @@ function NowPage() {
         <div className="now-section">
           <h2>working</h2>
           <p>
-            been at robinhood for around a year, understanding more about finance than i ever thought i&apos;d know (or care to know)
+            currently at ripple labs, working on the payments team, and learning about the crypto ecosystem!
           </p>
         </div>
 

@@ -8,6 +8,18 @@ const timelineItems = [
   {
     id: 1,
     type: 'work',
+    title: 'software engineer ii',
+    organization: 'ripple labs',
+    timeframe: 'mar 2026 - present',
+    location: 'toronto, on',
+    description: 'building scalable and reliable trading infrastructure for the crypto solutions.',
+    bullets: [
+      'working on the core shared services team for payments.',
+    ]
+  },
+  {
+    id: 2,
+    type: 'work',
     title: 'software engineer',
     organization: 'robinhood',
     timeframe: 'dec 2024 - present',
@@ -21,7 +33,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     type: 'work',
     title: 'research assistant',
     organization: 'university of toronto',
@@ -34,7 +46,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 7,
+    id: 4,
     type: 'work',
     title: 'software development engineer intern',
     organization: 'amazon web services (aws)',
@@ -47,7 +59,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     type: 'work',
     title: 'undergraduate researcher',
     organization: 'university of toronto (supervised by dr. emmy murphy)',
@@ -60,7 +72,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     type: 'work',
     title: 'teaching assistant',
     organization: 'university of toronto',
@@ -87,7 +99,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     type: 'work',
     title: 'software engineering intern',
     organization: 'graycore',
@@ -178,7 +190,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 15,
+    id: 14,
     type: 'work',
     title: 'undergraduate software researcher',
     organization: 'university of toronto',
@@ -193,7 +205,7 @@ const timelineItems = [
   },
   // passion projects (love)
   {
-    id: 14,
+    id: 15,
     type: '',
     title: 'baobab',
     organization: 'personal project',
@@ -219,7 +231,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 3,
+    id: 17,
     type: 'love',
     title: 'president',
     organization: 'mathematical and computational sciences society',
@@ -233,7 +245,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 17,
+    id: 18,
     type: 'love',
     title: 'co-founder',
     organization: 'deerhacks',
@@ -243,7 +255,7 @@ const timelineItems = [
     bullets: []
   },
   {
-    id: 18,
+    id: 19,
     type: 'love',
     title: 'personal photographer',
     organization: 'cool people i know',
@@ -255,7 +267,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 19,
+    id: 20,
     type: 'love',
     title: 'shadow president / vp of external affairs',
     organization: 'mathematical and computational sciences society',
@@ -269,7 +281,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 26,
+    id: 21,
     type: 'love',
     title: 'club exec',
     organization: 'multiple uoft clubs (mainly cs & math)',
@@ -279,7 +291,7 @@ const timelineItems = [
     bullets: []
   },
   {
-    id: 27,
+    id: 22,
     type: 'love',
     title: 'speaker',
     organization: 'utm math club',
@@ -288,19 +300,19 @@ const timelineItems = [
     description: 'helped out in various roles at various clubs at uoft',
     bullets: []
   },
-  {
-    id: 28,
-    type: 'love',
-    title: '',
-    organization: 'utm math club',
-    timeframe: 'sep 2020 - apr 2024',
-    location: 'mississauga, on',
-    description: 'helped out in various roles at various clubs at uoft',
-    bullets: []
-  },
+  // {
+  //   id: 23,
+  //   type: 'love',
+  //   title: 'club lead',
+  //   organization: 'utm math club',
+  //   timeframe: 'sep 2020 - apr 2024',
+  //   location: 'mississauga, on',
+  //   description: 'helped out in various roles at various clubs at uoft',
+  //   bullets: []
+  // },
   // education
   {
-    id: 25,
+    id: 24,
     type: 'education',
     title: 'former university student',
     organization: 'university of toronto',
@@ -323,7 +335,7 @@ const timelineItems = [
   //   ]
   // },
   {
-    id: 22,
+    id: 25,
     type: 'silly',
     title: 'boat goat',
     organization: 'amazon interns',
@@ -336,7 +348,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 30,
+    id: 26,
     type: 'silly',
     title: 'one piece card game expert',
     organization: 'one piece card game',
@@ -348,7 +360,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 31,
+    id: 27,
     type: 'silly',
     title: 'duolingo user',
     organization: 'hell',
@@ -361,7 +373,7 @@ const timelineItems = [
     ]
   },
   {
-    id: 32,
+    id: 28,
     type: 'silly',
     title: 'walking',
     organization: 'myself',
@@ -542,19 +554,19 @@ function AboutPage() {
             className={`filter-btn ${filter === 'love' ? 'active' : ''}`}
             onClick={() => setFilter('love')}
           >
-            what i did for love
+            what i did out of love
           </button>
           <button 
             className={`filter-btn ${filter === 'silly' ? 'active' : ''}`}
             onClick={() => setFilter('silly')}
           >
-            what i did for silly
+            what i did out of joy
           </button>
           <button 
             className={`filter-btn ${filter === 'work' ? 'active' : ''}`}
             onClick={() => setFilter('work')}
           >
-            what i did for work
+            what i did for my career
           </button>
         </div>
         <div className="timeline">

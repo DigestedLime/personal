@@ -3,7 +3,7 @@ import './ResumePage.css'
 function ResumePage() {
   // Place your resume PDF in the public folder and update this path
   // For example: if the file is public/resume.pdf, use '/resume.pdf'
-  const resumePath = '/Akira_Resume_Nov_2025.pdf'
+  const resumePath = '/Akira_Resume_April_2026.pdf'
 
   return (
     <div className="resume-page">
@@ -27,9 +27,6 @@ function ResumePage() {
             download resume
           </a>
         </div>
-        <p className="resume-note">
-          <em>note: update the resume path in ResumePage.jsx to point to your actual PDF file.</em>
-        </p>
       </div>
     </div>
   )
